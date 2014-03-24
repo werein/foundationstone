@@ -1,7 +1,7 @@
 # Keep it on top, don't change positions
+require 'codeclimate-test-reporter'
 require 'simplecov'
 require 'coveralls'
-require 'codeclimate-test-reporter'
 
 # Don't forget set token
 CodeClimate::TestReporter.start
