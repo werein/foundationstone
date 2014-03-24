@@ -2,7 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# Use development gems only in dummy app, Travis fails with dev gems in Gemfile
+# Use development gems only in dummy app
 require 'rails_admin'
 require 'bootstrap-sass'
 
