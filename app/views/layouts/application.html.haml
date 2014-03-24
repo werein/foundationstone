@@ -1,0 +1,20 @@
+!!!
+%html{lang: I18n.locale}
+  %head
+    = display_meta_tags site: Foundationstone::Config.app_name
+    = stylesheet_link_tag 'application', data: { 'turbolinks-track' => true }
+    /[if lt IE 9]
+      = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
+    %meta{charset: 'utf-8'}
+    %meta{content: "We're in s.r.o.", name: 'author'}
+    %meta{content: 'index,follow', name: 'robots'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %link{href: image_path('apple-touch-icon.png'), rel: 'apple-touch-icon'}
+    %link{href: image_path('apple-touch-icon-72x72.png'), rel: 'apple-touch-icon', sizes: '72x72'}
+    %link{href: image_path('apple-touch-icon-114x114.png'), rel: 'apple-touch-icon', sizes: '114x114'}
+    %link{href: image_path('apple-touch-icon-144x144.png'), rel: 'apple-touch-icon', sizes: '144x144'}
+    %link{href: image_path('favicon.ico'), rel: 'shortcut icon'}
+    = csrf_meta_tags
+  = render 'layouts/layout'
+  = google_analytics Foundationstone::Config.google_analytics
+  = javascript_include_tag 'application', data: { 'turbolinks-track' => true }

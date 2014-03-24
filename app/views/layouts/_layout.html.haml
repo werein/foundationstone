@@ -1,0 +1,22 @@
+%body{ id: body_id, class: body_class }
+  #wrapper
+    #header
+      .wrapper
+        #header-content= render 'layouts/header'
+    - if content_for? :bow
+      #bow
+        .wrapper
+          #bow-content= yield :bow
+    #main
+      .wrapper
+        #main-content
+          #port= yield :port if content_for?(:port)
+          #content= yield
+          #starboard= yield :starboard if content_for?(:starboard)
+    - if content_for? :stern
+      #stern
+        .wrapper
+          #stern-content= yield :stern
+    #footer
+      .wrapper
+        #footer-content= render 'layouts/footer'

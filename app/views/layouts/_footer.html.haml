@@ -1,0 +1,4 @@
+- if content_for? :footer
+  = yield :footer
+- else
+  This is default yield for footer, you can override layouts/_footer of create content_for :footer

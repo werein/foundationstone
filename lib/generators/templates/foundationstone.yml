@@ -1,0 +1,45 @@
+# Configure engine from yaml, you can set different config per environment
+
+default: &default
+
+  # Default application name, used in sidekiq, site title. Must be unique
+  app_name: 'FoundationStone'
+  unique_name: 'foundationstone'
+
+  # Website domain
+  domain: 'domain.tld'
+
+  # Disqus comment system
+  # disqus: 'disqus'
+
+  # Errbit error catcher
+  # errbit_api_key: '123'
+  # errbit_host: 'errbit.domain.tld'
+
+  # Google Analytics
+  # google_analytics: 'UX-123-123'
+
+  # Sidekiq
+  # sidekiq_login: 'admin'
+  # sidekiq_pass: 'admin'
+
+  # Kaminari default pagination
+  kaminari_default: 12
+
+  # Set mailer
+  mailer:
+    service: 'mandrill' # Or use other servicess like Google Apps or custom smtp server
+
+    mandril:
+      user_name: mail@domain.tld
+      key: YOURpassword
+
+development:
+  <<: *default
+  domain: 'localhost:3000'
+
+test:
+  <<: *default
+
+production:
+  <<: *default
