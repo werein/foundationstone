@@ -12,6 +12,3 @@ gemspec
 
 # To use debugger
 # gem 'debugger'
-
-gem 'rails_admin'
-gem 'bootstrap-sass'
