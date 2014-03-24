@@ -67,14 +67,6 @@ module Foundationstone
       end
     end
 
-    def extract text, opt = {}
-      if text
-        result = strip_tags text
-        result = result.truncate(opt[:truncate]) if opt[:truncate]
-        result.html_safe
-      end
-    end
-
     def flags resolution
       content_tag :div, class: 'flags' do
         I18n.available_locales.each do |flag|
