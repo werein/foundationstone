@@ -24,4 +24,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'tuberack'
   s.add_development_dependency 'rails_admin'
   s.add_development_dependency 'bootstrap-sass'
+  s.add_development_dependency 'sass-rails', '~> 4.0.2'
 end
