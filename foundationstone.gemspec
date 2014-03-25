@@ -16,10 +16,10 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*', 'LICENSE.txt', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails', '~> 4.0'
+  s.add_dependency 'rails', '~> 4.0.0'
   s.add_dependency 'rails-i18n', '~> 4.0'
   s.add_dependency 'meta-tags'
-  s.add_dependency 'route_translator', '~> 3.2'
+  s.add_dependency 'route_translator', '3.1.0' # 3.2 raise error
 
   s.add_development_dependency 'tuberack'
   s.add_development_dependency 'rails_admin'
