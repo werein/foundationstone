@@ -1,0 +1,8 @@
+- if object.errors.any?
+  .panel.panel-danger
+    .panel-heading
+      = t '.prohibited', count: object.errors.count
+    .panel-body
+      %ul
+        - object.errors.full_messages.each do |msg|
+          %li= msg
