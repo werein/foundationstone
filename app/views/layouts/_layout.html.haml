@@ -10,9 +10,11 @@
     #main
       .wrapper
         #main-content
-          #port= yield :port if content_for?(:port)
+          - if content_for? :port
+            #port= yield :port 
           #content= yield
-          #starboard= yield :starboard if content_for?(:starboard)
+          - if content_for? :starboard
+            #starboard= yield :starboard
     - if content_for? :stern
       #stern
         .wrapper
