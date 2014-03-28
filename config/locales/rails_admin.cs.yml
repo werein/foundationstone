@@ -1,0 +1,139 @@
+# Additional translations at https://github.com/sferik/rails_admin/wiki/Translations
+cs:
+  admin:
+    home:
+      name: "Domů"
+    pagination:
+      previous: "&laquo; Zpět"
+      next: "Další &raquo;"
+      truncate: "…"
+    misc:
+      filter_date_format: "mm/dd/yy" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
+      search: "Hledat"
+      filter: "Filtr"
+      refresh: "Aktualizovat"
+      show_all: "Zobrazit vše"
+      add_filter: "Přidat filtr"
+      bulk_menu_title: "Vybrané položky"
+      remove: "Odstranit"
+      add_new: "Přidat"
+      chosen: "Zvolený %{name}"
+      chose_all: "Vybrat vše"
+      clear_all: "Odznačit vše"
+      up: "Nahoru"
+      down: "Dolů"
+      navigation: "Navigace"
+      navigation_static_label: "Odkazy"
+      test: Test
+      test_static_label: "test"
+      log_out: "Odhlásit"
+      ago: ""
+    flash:
+      successful: "Úspěšně %{action}"
+      error: "Není %{action}"
+      noaction: "Neproběhly žádné změny"
+      model_not_found: "Model '%{model}' nebyl nalezen"
+      object_not_found: "Nenalezeno (%{model} s id '%{id}')"
+    table_headers:
+      model_name: "Název"
+      last_used: "Poslední použití před"
+      records: "Záznamy"
+      username: "Uživatel"
+      changes: "Změny"
+      created_at: "Datum/Čas"
+      item: "Položka"
+      message: "Zpráva"
+    actions:
+      nestable:
+        title: "Organizace"
+        menu: "Seřadit"
+        breadcrumb: "Organizace"
+        success: "Úspěšně uloženo"
+        error: "Chyba, nepodařilo se uložit"
+      dashboard:
+        title: "Administrace stránky"
+        menu: "Dashboard"
+        breadcrumb: "Dashboard"
+      index:
+        title: "%{model_label_plural}"
+        menu: "Seznam" #list
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "Detaily pro %{model_label} '%{object_label}'"
+        menu: "Zobraz"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "Zobraz v aplikaci"
+      new:
+        title: "Přidat | %{model_label}"
+        menu: "Přidat"
+        breadcrumb: "Přidat"
+        link: "Přidat"
+        done: "vytvořeno"
+      edit:
+        title: "Upravit '%{object_label}'"
+        menu: "Editovat"
+        breadcrumb: "Editovat"
+        link: "Upravit"
+        done: "upraveno"
+      delete:
+        title: "Odstranit | %{model_label} '%{object_label}'"
+        menu: "Odstranit"
+        breadcrumb: "Odstranit"
+        link: "'%{object_label}'"
+        done: "odstraněno"
+      bulk_delete:
+        title: "Odstranit %{model_label_plural}"
+        menu: "Odstranit více"
+        breadcrumb: "Odstranit více"
+        bulk_link: "Odstranit vybrané %{model_label_plural}"
+      export:
+        title: "Export %{model_label_plural}"
+        menu: "Export"
+        breadcrumb: "Export"
+        link: "Exportovat nalezené %{model_label_plural}"
+        bulk_link: "Exportovat vybrané %{model_label_plural}"
+        done: "Exportováno"
+      history_index:
+        title: "Historie pro %{model_label_plural}"
+        menu: "Historie"
+        breadcrumb: "Historie"
+      history_show:
+        title: "Historie pro %{model_label} '%{object_label}'"
+        menu: "Historie"
+        breadcrumb: "Historie"
+    form:
+      cancel: "Zrušit"
+      basic_info: "Základní info"
+      required: "Požadované"
+      optional: "Nepovinné"
+      one_char: "Znak"
+      char_length_up_to: "Délka až"
+      char_length_of: "Délka"
+      save: "Uložit"
+      save_and_add_another: "Uložit a přidat další"
+      save_and_edit: "Uložit a editovat"
+      all_of_the_following_related_items_will_be_deleted: "? Následující položky budou odstraněny nebo upraveny:"
+      are_you_sure_you_want_to_delete_the_object: "Jste si jistý, že chcete odstranit %{model_name}"
+      confirmation: "Ano, jsem"
+      bulk_delete: "Následující objekty budou odstraněny nebo upraveny, tyto změny se mohou projevit na jejich přidružených objektech:"
+      new_model: "%{name} (Nový)"
+    export:
+      confirmation: "Exportovat do %{name}"
+      select: "Vyberte položky pro export"
+      fields_from: "Položky z %{name}"
+      fields_from_associated: "Položky z přidružených %{name}"
+      display: "Zobrazit %{name}: %{type}"
+      options_for: "Volby pro %{name}"
+      empty_value_for_associated_objects: "<prázdný>"
+      click_to_reverse_selection: 'Vybrat reverzně'
+      csv:
+        header_for_root_methods: "%{name}" # 'model' Je dostupný
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "Kódování"
+        encoding_to_help: "Vyberte kódování výstupního souboru. Zanechte prázdné, jestli chcete použít základní: (%{name})"
+        skip_header: "Bez hlavičky"
+        skip_header_help: "Nevygeneruje hlavičku (pole s popisky)"
+        default_col_sep: ","
+        col_sep: "Oddělovač sloupců"
+        col_sep_help: "Zanechte prázdné, pokud chcete použít základní ('%{value}')" # value is default_col_sep
