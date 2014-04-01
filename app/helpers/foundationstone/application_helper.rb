@@ -88,7 +88,7 @@ module Foundationstone
         result = ''
         object.translations.each_with_index do |translation, i|
           result += content_tag :li, class: ('active' if i == 0) do
-            content_tag :a, href: "#translation_#{i}", data: { toggle: 'tab' } do
+            content_tag :a, href: "#tab-#{i}", data: { toggle: 'tab' } do
               (!translation.to_s or translation.to_s.empty?) ? t('foundationstone.new_translation') : translation.to_s
             end
           end
