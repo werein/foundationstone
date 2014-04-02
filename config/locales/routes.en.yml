@@ -1,0 +1,5 @@
+---
+en:
+  routes:
+    new: new
+    edit: edit

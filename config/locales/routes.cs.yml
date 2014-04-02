@@ -1,0 +1,5 @@
+---
+cs:
+  routes:
+    new: vytvorit
+    edit: upravit
