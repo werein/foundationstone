@@ -1,0 +1,40 @@
+# config/i18n-tasks.yml
+base_locale: en
+locales: [en, cs] # This includes base_locale by default
+
+# i18n data storage
+data:
+  # file_system is the default adapter, you can provide a custom class name here:
+  adapter: file_system
+  # a list of file globs to read from per-locale
+  read: 
+    # default:
+    - 'config/locales/%{locale}.yml'
+    # to also read from namespaced files, e.g. simple_form.en.yml:
+    - 'config/locales/*.%{locale}.yml'
+  # a list of {key pattern => file} routes, matched top to bottom
+  write:
+    # store sorcery and simple_form keys in the respective files:
+    # - ['{sorcery,simple_form}.*', 'config/locales/\1.%{locale}.yml']
+    # write every key namespace to its own file:
+    - ['{:}.*', 'config/locales/\1.%{locale}.yml']
+
+# directories containing relative keys
+relative_roots:
+  # default:
+  - app/views
+  # add a custom one:
+  - app/cells
+
+# Exclude controller, watch this
+# https://github.com/glebm/i18n-tasks/issues/46
+# i18n usage search in source
+search:
+  # explicitly exclude files (default: blank = exclude no files)
+  exclude:
+    - '*_controller.rb'
+
+# do not report these keys as unused
+ignore_unused:
+  - routes.*
+  - breadcrumbs.*
