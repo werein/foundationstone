@@ -1,7 +1,7 @@
 module Foundationstone
   module ManageHelper
     def manage_create_button klass, options = {}
-      link_to gt('pencil', t('foundationstone.helper.manage.create', model: klass.model_name.human.downcase)), new_polymorphic_path(klass), style: ('display:none' unless manage?), class: "manage btn btn-info btn-text btn-create", 'data-no-turbolink' => true if can? :create, klass
+      link_to gt('pencil', t('foundationstone.helper.manage.create', model: klass.model_name.human.downcase)), new_polymorphic_path(klass), style: ('display:none' unless manage?), class: "manage manage-hor btn btn-info btn-text", 'data-no-turbolink' => true if can? :create, klass
     end
 
     def manage_icons object, options = {}
@@ -13,7 +13,7 @@ module Foundationstone
       end
       if (can? :create, klass) || (can? :edit, klass) || (can? :delete, klass)
         except = options.fetch(:except, [])
-        content_tag :div, class: "manage btn-group-vertical btn-manage #{options[:class]}", style: ('display:none' unless manage?) do
+        content_tag :div, class: "manage manage-ver btn-group-vertical #{options[:class]}", style: ('display:none' unless manage?) do
           res = ''
           res += link_to glyphicon('pencil'), new_polymorphic_path(path),
               'data-no-turbolink' => true, class: "btn btn-default" unless except.include?(:new)
@@ -36,7 +36,7 @@ module Foundationstone
         klass, path = object.class, object.class
       end
       if (can? :create, klass) ||(can? :edit, klass) || (can? :delete, klass)
-        content_tag :div, class: "manage btn-group btn-manage #{options[:class]}", style: ('display:none' unless manage?) do
+        content_tag :div, class: "manage manage-hor btn-group #{options[:class]}", style: ('display:none' unless manage?) do
           res = ''
           res += link_to gt('pencil', t('foundationstone.helper.manage.create', model: klass.model_name.human.downcase)), new_polymorphic_path(path),
               'data-no-turbolink' => true, class: "btn btn-default btn-text" unless options[:new]
