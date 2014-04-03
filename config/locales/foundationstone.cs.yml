@@ -1,0 +1,13 @@
+---
+cs:
+  foundationstone:
+    error:
+      prohibited: Nepodařilo se nám informace uložit, zkuste to prosím znova
+    helper:
+      manage:
+        confirm: Jste si jistý?
+        create: Vytvořit (%{model})
+        destroy: Smazat
+        edit: Upravit
+        view: Zobrazit vše
+    new_translation: Nový překlad

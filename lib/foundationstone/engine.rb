@@ -8,6 +8,7 @@ module Foundationstone
 
     initializer :append_views do
       ActionView::Base.send :include, ApplicationHelper
+      ActionView::Base.send :include, ManageHelper
     end
   end
 end

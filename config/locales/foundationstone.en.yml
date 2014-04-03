@@ -1,0 +1,13 @@
+---
+en:
+  foundationstone:
+    error:
+      prohibited: Prohibited
+    helper:
+      manage:
+        confirm: Are you sure?
+        create: Create %{model}
+        destroy: Destroy
+        edit: Edit
+        view: View
+    new_translation: New translation
