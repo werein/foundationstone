@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'route_translator', '3.1.0' # 3.2 raise error
   s.add_dependency 'i18n-tasks'
 
-  s.add_development_dependency 'tuberack'
+  s.add_development_dependency 'tuberack', '~> 1.1.1'
   s.add_development_dependency 'rails_admin'
   s.add_development_dependency 'bootstrap-sass'
   s.add_development_dependency 'sass-rails', '~> 4.0.2'
