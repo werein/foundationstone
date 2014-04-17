@@ -20,8 +20,8 @@ default: &default
   # google_analytics: 'UX-123-123'
 
   # Sidekiq
-  # sidekiq_login: 'admin'
-  # sidekiq_pass: 'admin'
+  sidekiq_login: 'admin'
+  sidekiq_pass: 'admin'
 
   # Kaminari default pagination
   kaminari_default: 12
