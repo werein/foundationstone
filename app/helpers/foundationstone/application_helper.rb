@@ -52,19 +52,15 @@ module Foundationstone
       Time.zone.now.to_datetime
     end
 
-    def bootstrap_flash
-      flash_messages = []
-      flash.each do |type, message|
-        type = 'alert-success' if type == :notice
-        type = 'alert-error alert-danger' if type == :alert
-        text = content_tag(:div, link_to("x", "#", class: "close", data: {dismiss: 'alert'}) + message, class: "alert fade in #{type}")
-        flash_messages << text if message
-      end
-      if flash_messages
-        content_tag :div, id: 'alerts' do 
-          flash_messages.join("\n").html_safe
+    def alerts
+      flash_messages = flash.map do |type, message|
+        content_tag :div, class: "#{type}d" do
+          message
         end
       end
+      content_tag :div, id: 'alerts' do 
+        safe_join(flash_messages,'<br/>')
+      end unless flash_messages.empty?
     end
 
     def flags resolution

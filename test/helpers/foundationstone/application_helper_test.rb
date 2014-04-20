@@ -43,11 +43,14 @@ describe Foundationstone::ApplicationHelper do
     current_date.to_s.must_equal Time.zone.now.to_datetime.to_s
   end
 
-  it "should generate bootstrap flash" do 
+  it "should generate notice flash" do 
     self.stubs(:flash).returns(notice: 'Notice')
-    bootstrap_flash.must_equal '<div id="alerts"><div class="alert fade in alert-success"><a class="close" data-dismiss="alert" href="#">x</a>Notice</div></div>'
+    alerts.must_equal '<div id="alerts"><div class="noticed">Notice</div></div>'
+  end
+
+  it "should generate alert flash" do
     self.stubs(:flash).returns(alert: 'Alert')
-    bootstrap_flash.must_equal '<div id="alerts"><div class="alert fade in alert-error alert-danger"><a class="close" data-dismiss="alert" href="#">x</a>Alert</div></div>'
+    alerts.must_equal '<div id="alerts"><div class="alertd">Alert</div></div>'
   end
 
   it "shouldn't show anything" do
