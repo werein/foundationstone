@@ -13,7 +13,8 @@ Coveralls.wear! if Coveralls.should_run?
 ENV["RAILS_ENV"] = "test"
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
-require "rails/test_help"
+require 'rails/test_help'
+require 'tuberack'
 
 Rails.backtrace_cleaner.remove_silencers!
 
@@ -30,8 +31,6 @@ require 'capybara/rails' # Capybara must be required directly
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
 end
-
-require 'tuberack'
 
 include Tuberack::Helpers
 
