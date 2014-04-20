@@ -2,10 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# Use development gems only in dummy app
-require 'rails_admin'
-require 'bootstrap-sass'
-
 Bundler.require(*Rails.groups)
 require "foundationstone"
 
