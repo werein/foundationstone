@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 4.0'
   s.add_dependency 'rails-i18n', '~> 4.0'
   s.add_dependency 'meta-tags'
-  s.add_dependency 'route_translator', '3.1.0' # 3.2 raise error
+  s.add_dependency 'route_translator', '>= 3.2.4' # 3.2 raise error
   s.add_dependency 'i18n-tasks'
 
   s.add_development_dependency 'tuberack', '~> 1.1.1'
